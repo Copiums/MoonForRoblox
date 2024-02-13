@@ -32,7 +32,8 @@ local runService = game:GetService'RunService'
 local supportFrame = game:GetObjects"rbxassetid://13119197703"[1]
 local getmoonasset = function(asset) return ((syn and getsynasset) or getcustomasset)(asset) end
 --> Fetching from github
-writefile("paimon.webm", game:HttpGet"https://github.com/Storm99999/whitelistkeys/blob/main/paimon.webm?raw=true")
+local fileContent = game:HttpGet("https://github.com/Storm99999/whitelistkeys/blob/main/paimon.webm?raw=true")
+writefile("paimon.webm", fileContent)
 --> Sets
 HUD_IMPORT_OBJECT.Parent = hudFolder
 HUD_IMPORT_OBJECT.Visible = false
